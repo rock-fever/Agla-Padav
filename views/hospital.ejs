@@ -1,0 +1,106 @@
+<%- include("partials/header") %>
+
+
+<h1 class="ml-5 py-4"> Hospital </h1>
+<div class="filter_area container">
+    <label for="filter_data"><i class="fa fa-filter" aria-hidden="true"></i>&nbsp;filter</label>
+    <select name="filter_data" id="filter_data" onchange="filterSelection()">
+        <% if(qr === "ds"){ %>
+            <option value="ds" selected>distance</option>
+        <%}else{%>
+            <option value="ds">distance</option>
+        <%}%>
+        <% if(qr === "bd"){ %>
+            <option value="bd" selected>bed availability</option>
+        <%}else{%>
+            <option value="bd">bed availability</option>
+        <%}%>
+        <% if(qr === "vt"){ %>
+            <option value="vt" selected>ventilators</option>
+        <%}else{%>
+            <option value="vt">ventilators</option>
+        <%}%>
+    </select>
+</div>
+<div class="hosp_body container py-5">
+    <% for(var i = 0; i < data.length - 1; i++){%>
+    <div class="hospital_card">
+        <div class="hospital_name"> <%= data[i][0] %> </div>
+        <div class="hosp_details ">
+            <div class="details_row1 row d-flex">
+                <div class="hospital_name col-lg-2 col-4">
+                    <div class="hosp_details_title">
+                        Boardline No.
+                    </div>
+                    <span class="hosp_details_val">
+                        <%= data[i][1] %>
+                    </span>
+                </div>
+                <div class="hospital_beds_avail col-lg-2 col-4">
+                    <div class="hosp_details_title">
+                        Beds Available
+                    </div>
+                    <span class="hosp_details_val">
+                        <font color="green"><%= data[i][2] %></font>
+                    </span>
+                </div>
+                <div class="hospital_icu_beds_avail col-lg-2 col-4">
+                    <div class="hosp_details_title">
+                        ICU Beds
+                    </div>
+                    <span class="hosp_details_val">
+                        <font color="brown"><%= data[i][3] %></font>
+                    </span>
+                </div>
+                <div class="hospital_ventilators col-lg-2 col-4">
+                    <div class="hosp_details_title">
+                        Ventilators
+                    </div>
+                    <span class="hosp_details_val">
+                        <font color="grey"><%= data[i][4] %></font>
+                    </span>
+                </div>
+                <div class="hospital_isolation_beds col-lg-2 col-4">
+                    <div class="hosp_details_title">
+                        Isolation Beds
+                    </div>
+                    <span class="hosp_details_val">
+                        <font color="cyan"><%= data[i][5] %></font>
+                    </span>
+                </div>
+                <div class="hospital_category col-lg-2 col-4">
+                    <div class="hosp_details_title">
+                        Category
+                    </div>
+                    <span class="hosp_details_val">
+                        <font color="voilet"><b>Private</b></font>
+                    </span>
+                </div>
+                <div class="hospital_dist col-lg-2 col-4">
+                    <div class="hosp_details_title">
+                        <font color="brown">Distance</font> 
+                    </div>
+                    <span class="hosp_details_val">
+                        <font color="black"><b><%= data[i][6] %> km</b></font>
+                    </span>
+                </div>
+                <div class="navigation col-lg-2 col-4">
+                    <div class="nav_icon">
+                        <a href= '<%="https://www.google.com/maps/search/?api=1&query=" + data[i][7]%>' target="_BLANK" title="go to maps">
+                            <i class="fa fa-map-marker" aria-hidden="true" style="color:black; font-size:25px;padding-top:20px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%}%>
+</div>
+<script>
+    function filterSelection(){
+        var x = document.getElementById("filter_data").value;
+        window.location.href="/hospital?SORTED_BY=" + x;
+    }
+</script>
+
+<%- include("partials/footer") %>

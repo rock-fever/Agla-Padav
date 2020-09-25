@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .nav_tab_link{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding:10px;
+        }
+        .nav_tab_link:hover{
+            color:rgb(4, 126, 126);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav_tab container">
+        <div class="nav_tab_links" style="width:300px; padding:10px; margin:auto; margin-top:50px; background-color: rgb(205, 208, 211); text-align: center;">
+            <a href="/needer_data" class="nav_tab_link">Needer data</a>
+            <a href="/donor_data" class="nav_tab_link" style="color:rgb(4, 126, 126);">Donor data</a>
+        </div>
+    </div>
+    <div class="needer_list" style="text-align: center; width: 70%; min-width: 800px; margin: auto; margin-top: 100px;">
+        <table cellpadding= "10px" id="customers" style="text-align: center;width: 100%; border: 1px solid black; border-collapse: collapse;">
+            <tr>
+                <th>Name </th>
+                <th>Contact</th>
+                <th>Blood Group</th>
+                <th>City</th>
+                <th>Pincode</th>
+                <th>State</th>
+                <th> Date</th>
+                <th> Status</th>
+            </tr>
+            <% for(var i = 0; i <data.length; i++ ) { %>
+            <%if(!data[i].isChecked){%>
+            <tr style="padding: 10px; background-color: red; color:white">
+                
+                <td> <%= data[i].name %> </td>
+                <td> <%= data[i].contact %> </td>
+                <td> <%= data[i].blood%></td>
+                <td> <%= data[i].city %></td>
+                <td> <%= data[i].pincode%></td>
+                <td> <%= data[i].state %> </td>
+                <td> <%= data[i].date %> </td>
+                <td > pending <input type="checkbox"   onclick="changeStatus('<%=data[i].id %>')"></td>
+            </tr>
+            <%}else{%>
+                <tr style="padding: 10px; background-color: green; color:white;">
+                    <td> <%= data[i].name %> </td>
+                    <td> <%= data[i].contact %> </td>
+                    <td> <%= data[i].blood%></td>
+                    <td> <%= data[i].city %></td>
+                    <td> <%= data[i].pincode%></td>
+                    <td> <%= data[i].state %> </td>
+                    <td> <%= data[i].date %> </td>
+                    <td>done <input type="checkbox"  onclick="changeStatus('<%=data[i].id %>')" checked></td>
+                </tr>
+                <%}%>
+           
+            <%  } %>
+            
+        </table>
+    
+    </div>
+    <script>
+        function changeStatus(id){
+            window.location.href="/changeStatuss/?id=" + id;
+        }
+    </script>
+</body>
+</html>

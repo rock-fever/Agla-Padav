@@ -1,0 +1,177 @@
+<%- include("partials/header") %>
+
+<div class="start container">
+    <div class="agla_padav row py-5">
+        <div class="agla_title col-6">
+           <div class="agla_logo">
+
+           </div>
+        </div>
+        <div class="agla_moto col-6">
+            Your solution to all the post covid problem <br>
+            Hospital on basis of distance, no of beds, ventilators, ICU, etc is now just a click away
+        </div>
+    </div>
+   
+    <div class="mainrow row">
+        <div class="world col-sm-6">
+            <h3> World </h3>
+            <h5> Confirmed Cases: <font color="blue"><%=wd[0].text%> </font></h5>
+            <h5> Recovered Cases: <font color="green"><%=wd[2].text%></font></h5>
+            <h5> Death Cases: <font color="red"><%= wd[1].text%></font> </h5>
+
+        </div>
+        <div class=" india col-sm-6">
+            <h3> India </h3>
+            <h5> Confirmed Cases: <font color="blue"><%=id[0].text%> </font></h5>
+            <h5> Recovered Cases: <font color="green"><%=id[2].text%></font></h5>
+            <h5> Death Cases: <font color="red"><%=id[1].text%></font> </h5>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container plasma_cont">
+
+    <div class="top">
+        <div class="col-sm-12">
+            <h2> Plasma Donation</h2>
+        </div>
+    </div>
+
+    <div class="info_tags d-flex">
+        <div class="info_tag1 ml-auto">
+            Want to donate plasma?<br>
+            Head ahead!<br>
+            <a href="/donor_register">
+                <div class="btn btn-success btn-large mt-2">Donate</div>
+            </a>
+        </div>
+        <div class="info_tag2 mr-auto">
+            Do you need plasma?<br>
+            We will connect you the donors!<br>
+            <a href="/needer_register">
+                <div class="btn btn-primary btn-large mt-2">Need Plasma</div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="container">
+
+    <div class="top">
+        <div class="col-sm-12">
+            <h2> Precautions </h2>
+        </div>
+    </div>
+
+    <div class="prec">
+        <div class="card ">
+            <div class="row">
+                <div class="tick1 col-sm-6">
+                    <p> Clean your hands often. Use soap, water or hand rub </p>
+                </div>
+    
+                <div class="tick2 col-sm-6">
+                    <p> Maintain a safe distance from anyone who is coughing or sneezing. </p>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="card">
+            <div class="row">
+                <div class="tick1 col-sm-6">
+                    <p> Wear a mask when physical distancing is not possible. </p>
+                </div>
+    
+                <div class="tick2 col-sm-6">
+                    <p> Don’t touch your eyes, nose or mouth. </p>
+                </div>
+    
+            </div>      
+        </div>
+
+
+        <div class="card">
+            <div class="row">
+                <div class="tick1 col-sm-6">
+                    <p> Cover your nose and mouth with tissue when you cough or sneeze. </p>
+                </div>
+    
+                <div class="tick2 col-sm-6">
+    
+                    <p> If you have symptomns, seek medical attention. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="start1 container">
+
+    <div class="Post">
+        <h2> Post Covids Solutions </h2>
+    </div>
+
+
+
+    <div class="row py-4">
+        <div class="image1 col-sm-4">
+            <img src="lab.png" alt="labs" width="150" height="150">
+        </div>
+
+        <div class="text1 col-sm-8">
+            <h4> Lab </h4>
+            <p> Getting yourself check to ensure whether the symptomns you have are of normal fever or COVID is first
+                step.
+                In lab section you can check the the labs in your state that provide COVID 19 testing, you can also
+                check
+                the distance of test center from your current location. </p>
+        </div>
+    </div>
+
+    <div class="row py-4">
+        <div class="text1 col-sm-8">
+            <h4> Hospital </h4>
+            <p> Unforntunately even if you get tested COVID positive, don't panic. In hospital section you can check the
+                complete list
+                of hospital around you with complete info such as distance from your home current location, bed
+                availability, ICU availabilty,
+                no of ventilators and emergency numbers. </p>
+        </div>
+
+        <div class="image2 col-sm-4">
+            <img src=" hospital.png" alt="hospitals" width="150" height="150">
+        </div>
+    </div>
+
+    <div class=" row py-4" >
+        <div class="image1 col-sm-4">
+            <img src=" filter.png" alt="filters" width="150" height="150">
+        </div>
+
+        <div class="text1 col-sm-8">
+            <h4> Custom Filters </h4>
+            <p> In case of emergency you may want to know your nearest hospitals, want a hospital to have icu's,
+                ventillators etc so that
+                you don't have to face any panics situations. So you can use filters to get hospital in according to
+                nearest distance from your
+                location, according to no of bed, no of icu's or ventilators. </p>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<%- include("partials/footer") %>

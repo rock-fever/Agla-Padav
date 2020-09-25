@@ -1,0 +1,290 @@
+* {
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.header {
+	width: 100%;
+	height: 60px;
+	display: block;
+	background-color: #101010;
+}
+
+.inner_header {
+	width: 800px;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.logo_container {
+	height: 100%;
+	display: table;
+	float: left;
+}
+
+.logo_container h1 {
+	color: white;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: monospace;
+	font-size: 32px;
+}
+
+.logo_container h1 span {
+	font-weight: bolder;
+}
+
+.navigation {
+	float: right;
+	height: 100%;
+}
+
+.navigation a {
+	height: 100%;
+	display: table;
+	float: left;
+	color: white;
+	padding: 0px 20px;
+}
+.navigation a:hover{
+	text-decoration:none;
+	color: red;
+}
+.navigation a li {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	font-family: Monospace;
+	font-size: 16px;
+}
+
+.hosp_body {
+	background-color: rgb(245, 243, 243);
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.hospital_card {
+	background-color: rgb(255, 255, 255);
+	margin: 30px 30px 30px 30px;
+	height: auto;
+	padding: 15px;
+	padding-bottom: 40px;
+	box-shadow: 5px 6px #e6e4e4;
+}
+
+.hospital_name {
+	font-size: 18px;
+	font-family: 'Merriweather', serif;
+}
+
+.hosp_details_title {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	font-family: 'Noto Sans KR', sans-serif;
+	color: #2c2c2c;
+}
+
+.hosp_details_val {
+	font-size: 13px;
+	color: #444242;
+}
+
+.hosp_details {
+	padding-left: 15px;
+}
+
+
+.footer {
+	width: 100%;
+	height: 60px;
+	display: block;
+	background-color: #101010;
+}
+
+.inner_footer {
+	width: 200px;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.footor_container {
+	height: 100%;
+	display: table;
+	float: left;
+}
+
+.footor_container h1 {
+	color: white;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: monospace;
+	font-size: 16px;
+}
+
+.start {
+	text-align: center;
+	padding: 3%;
+	background-color: rgb(250, 248, 248);
+}
+
+.agla_logo {
+	background-image: url('agla_padav.png');
+	background-size: 100% 100%;
+	height: 150px;
+	width: 150px;
+	margin: auto;
+}
+
+.agla_moto {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+.world h3,
+.india h3 {
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.world h5,
+.india h5 {
+	font-family: 'Merriweather', serif;
+	font-size: 18px !important;
+}
+
+.mainrow {
+	padding: 2%;
+}
+
+.start1 {
+	padding: 7%;
+}
+
+.Post h2 {
+	text-align: center;
+	font-size: 32px;
+}
+
+
+.world p {
+	word-wrap: break-word;
+}
+
+.col-sm-4 {
+	align-content: right;
+}
+
+.row {
+
+	margin-top: 3%;
+}
+
+.image1 img {
+	border-radius: 50%;
+	float: right;
+
+}
+
+.image2 img {
+	border-radius: 50%;
+	float: left;
+
+}
+
+.text1 {
+	padding: 1.5%;
+}
+
+.text1 h4 {
+	font-weight: bold;
+}
+
+.top {
+	text-align: center;
+	padding: 3%;
+
+}
+
+.card {
+	padding: 3%;
+}
+
+.tick1,
+.tick2 {
+	text-align: center;
+}
+
+
+.tick1 p,
+.tick2 p {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 8px;
+
+}
+
+.tick1 p:hover, .tick2 p:hover{
+	background-color: rgb(21, 108, 135);
+	color:white;
+	cursor: pointer;
+}
+
+.Post h2,
+.top h2 {
+	font-weight: bold;
+}
+
+.reg_form{
+	font-size:16px;
+	padding:20px;
+	
+}
+.input, select, .plasma_need_proof{
+	width:100%;
+	max-width:500px;
+	height:40px;
+}
+
+.reg_form_cont{
+	margin-top:50px;
+	font-size:20px;
+	font-weight:bold;
+	width:60%;
+	min-width:350px;
+	margin-bottom: 40px;
+}
+.reg_form{
+	font-size:16px;
+	padding:20px;
+}
+.input, select{
+	width:100%;
+	max-width:500px;
+	height:40px;
+}
+.plasma_cont{
+	margin-top:50px;
+	margin-bottom: 50px;
+	padding-bottom:50px;
+	background-color: #ebf2f1;
+	border-radius: 40px;
+}
+
+.plasma_cont .info_tags{
+	font-size:20px;
+	font-weight: bold;
+}
+
+.plasma_cont .info_tag1{
+	width:50%;	
+}

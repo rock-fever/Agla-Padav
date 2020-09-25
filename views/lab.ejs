@@ -1,0 +1,32 @@
+<%- include("partials/header") %>
+
+
+<h1 class="ml-5 py-4"> Testing Labs </h1>
+<div class="hosp_body container py-5">
+    <% for(var i = 0; i < data.length - 1; i++){%>
+    <div class="hospital_card">
+        <div class="hospital_name"> <%= data[i][0] %> </div>
+        <div class="hosp_details ">
+            <div class="details_row1 row d-flex">
+                <div class="hospital_dist col-lg-2 col-4">
+                    <div class="hosp_details_title">
+                        <font color="brown">Distance</font> 
+                    </div>
+                    <span class="hosp_details_val">
+                        <font color="black"><b><%= data[i][1] %> km</b></font>
+                    </span>
+                </div>
+                <div class="navigation col-lg-2 col-4">
+                    <div class="nav_icon">
+                        <a href='<%="https://www.google.com/maps/search/?api=1&query=" + data[i][2]%>' target="_BLANK" title="go to maps">
+                            <i class="fa fa-map-marker" aria-hidden="true" style="color:black; font-size:25px;padding-top:20px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%}%>
+</div>
+
+<%- include("partials/footer") %>
