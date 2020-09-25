@@ -1,2 +1,4 @@
 # Agla-Padav
-One stop solution to post covid problems
+This provides list of all nearby covid hospitals and testing labs..
+Displays them according to user need.
+Plasma donation portal is there.
